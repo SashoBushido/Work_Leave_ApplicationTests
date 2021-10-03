@@ -1,0 +1,285 @@
+{
+  "id": "a0f4c69e-2bd6-4292-bc0d-71543eaf41b2",
+  "version": "2.0",
+  "name": "Work Leave Application",
+  "url": "https://test.easyleave.de/",
+  "tests": [{
+    "id": "33e3e74a-0db2-4a3d-b40b-99a1c5b566b8",
+    "name": "1. Login successful - correct email and password",
+    "commands": [{
+      "id": "f56ce678-98a0-4824-b117-849e51da3ab6",
+      "comment": "",
+      "command": "open",
+      "target": "https://test.easyleave.de/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e6874c6-e336-44b9-ace0-dacc764b9a13",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c2efa5f-cf94-40d4-b347-7dae8a27fceb",
+      "comment": "",
+      "command": "type",
+      "target": "id=emailAddress",
+      "targets": [
+        ["id=emailAddress", "id"],
+        ["name=emailAddress", "name"],
+        ["css=#emailAddress", "css:finder"],
+        ["xpath=//input[@id='emailAddress']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "albert.ascher@westernacher.com"
+    }, {
+      "id": "879a5dac-9999-459e-bd92-e5d09f43b0b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=password", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "753951"
+    }, {
+      "id": "75909954-95e0-42c7-87ea-a5b0857ce319",
+      "comment": "",
+      "command": "click",
+      "target": "id=logButton",
+      "targets": [
+        ["id=logButton", "id"],
+        ["css=#logButton", "css:finder"],
+        ["xpath=//button[@id='logButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c208ba6-6ee4-461f-b332-83dee67fb02c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h2[contains(.,'Personal leaves')]",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Personal leaves')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "e28d501b-aa9a-4f93-8ff6-92d75ce5369a",
+      "comment": "",
+      "command": "click",
+      "target": "id=accountMenu",
+      "targets": [
+        ["id=accountMenu", "id"],
+        ["linkText=Account", "linkText"],
+        ["css=#accountMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Account')]", "xpath:link"],
+        ["xpath=//a[@id='accountMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[7]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Account ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4933aab-53f7-423e-af6d-7ed66a98c7e7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dropdown-item:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/div/a[4]", "xpath:idRelative"],
+        ["xpath=//li[2]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "781e0f4a-d382-4b26-a9d9-e2701fae4530",
+    "name": "2. Login unsuccessful - correct email, wrong password",
+    "commands": [{
+      "id": "6e1ade21-9229-4b64-820b-964f2a20018a",
+      "comment": "",
+      "command": "open",
+      "target": "https://test.easyleave.de/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0782db7d-0b72-4b4f-9fd4-306e81347255",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44f069af-0d6f-41c1-a3cc-eb7b4912623a",
+      "comment": "",
+      "command": "type",
+      "target": "id=emailAddress",
+      "targets": [
+        ["id=emailAddress", "id"],
+        ["name=emailAddress", "name"],
+        ["css=#emailAddress", "css:finder"],
+        ["xpath=//input[@id='emailAddress']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "albert.ascher@westernacher.com"
+    }, {
+      "id": "91593cc6-7d74-4b55-8256-ffd7bcf86a37",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=password", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "22222222"
+    }, {
+      "id": "1db254f8-e296-4125-8617-24c2a8e3377b",
+      "comment": "",
+      "command": "click",
+      "target": "id=logButton",
+      "targets": [
+        ["id=logButton", "id"],
+        ["css=#logButton", "css:finder"],
+        ["xpath=//button[@id='logButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b3ef03c-9e9c-461a-98fd-a0849f82cd47",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='loginAlert']",
+      "targets": [
+        ["id=loginAlert", "id"],
+        ["css=#loginAlert", "css:finder"],
+        ["xpath=//div[@id='loginAlert']", "xpath:attributes"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8aa1c626-5b00-4136-8bf2-44bbbaad110f",
+    "name": "3. Logout",
+    "commands": [{
+      "id": "ca882e89-a21c-4428-ab2c-7fa86f6230c0",
+      "comment": "",
+      "command": "open",
+      "target": "https://test.easyleave.de/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e676a10-f8f9-4099-9675-2e7e3eafec99",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "694919bd-73bb-467a-84e1-6c54e060a9f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=emailAddress",
+      "targets": [
+        ["id=emailAddress", "id"],
+        ["name=emailAddress", "name"],
+        ["css=#emailAddress", "css:finder"],
+        ["xpath=//input[@id='emailAddress']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "albert.ascher@westernacher.com"
+    }, {
+      "id": "86212b4d-455a-4f8c-9f6f-a52a760d7338",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=password", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "753951"
+    }, {
+      "id": "c9df17d0-07b0-4def-89bd-19e1fdc37fc7",
+      "comment": "",
+      "command": "click",
+      "target": "id=logButton",
+      "targets": [
+        ["id=logButton", "id"],
+        ["css=#logButton", "css:finder"],
+        ["xpath=//button[@id='logButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09e8e8cf-cf02-4f09-88c1-47531158fb78",
+      "comment": "",
+      "command": "click",
+      "target": "id=accountMenu",
+      "targets": [
+        ["id=accountMenu", "id"],
+        ["linkText=Account", "linkText"],
+        ["css=#accountMenu", "css:finder"],
+        ["xpath=//a[contains(text(),'Account')]", "xpath:link"],
+        ["xpath=//a[@id='accountMenu']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[7]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Account ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "726d1bc0-093e-4928-a6dd-2d8336af655a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dropdown-item:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/div/a[4]", "xpath:idRelative"],
+        ["xpath=//li[2]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33daf323-aa1d-4404-8206-e0989989099b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//*[@id=\"loginAlert\"]",
+      "targets": [
+        ["id=loginAlert", "id"],
+        ["css=#loginAlert", "css:finder"],
+        ["xpath=//div[@id='loginAlert']", "xpath:attributes"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }]
+  }],
+  "suites": [{
+    "id": "adc2ca9b-8528-4ce9-92c0-8a00fc7597fb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["33e3e74a-0db2-4a3d-b40b-99a1c5b566b8"]
+  }],
+  "urls": ["https://test.easyleave.de/"],
+  "plugins": []
+}
